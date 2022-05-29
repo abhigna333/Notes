@@ -54,7 +54,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           children: [
             Center(
               child: Text(
-                "Sign Up",
+                "Forgot Password",
                 style: GoogleFonts.nunito(fontSize: 30, fontWeight: FontWeight.w700),
               ),
             ),
