@@ -64,6 +64,7 @@ class _HomePageState extends State<HomePage> {
                                         .collection("Users")
                                         .doc(FirebaseAuth.instance.currentUser!.uid)
                                         .collection("Notes")
+                                        .orderBy('date', descending: true)
                                         .snapshots(),
                 builder: (context, AsyncSnapshot<QuerySnapshot> snapshot){
                   if(snapshot.connectionState == ConnectionState.waiting){

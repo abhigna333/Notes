@@ -27,7 +27,28 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 57, 56, 54),
         elevation: 0.5,
-        title: Text("Add a new note"),),
+        title: TextFormField(
+          decoration: InputDecoration.collapsed(
+            hintText: "Title",
+          ),
+          style: TextStyle(
+            fontSize: 20.0,
+            
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+          onChanged: (_val) {
+            title = _val;
+          },
+          validator: (_val) {
+            if (_val == null) {
+              return "Can't be empty !";
+            } else {
+              return null;
+            }
+          },
+          ),
+      ),
 
       body: SingleChildScrollView(
         child: Container(
@@ -38,33 +59,9 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
               Form(
                     child: Column(
                       children: [
-                        TextFormField(
-                          decoration: InputDecoration.collapsed(
-                            hintText: "Title",
-                          ),
-                          style: TextStyle(
-                            fontSize: 32.0,
-                            
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                          onChanged: (_val) {
-                            title = _val;
-                          },
-                          validator: (_val) {
-                            if (_val == null) {
-                              return "Can't be empty !";
-                            } else {
-                              return null;
-                            }
-                          },
-                        ),
+                        
       
-                        SizedBox(height: 10.0,),
-      
-                        Text(date, style: TextStyle(color: Color.fromARGB(255, 248, 247, 247),)),
-      
-                        SizedBox(height: 30.0,),
+                        SizedBox(height: 20.0,),
       
                         TextFormField(
                           maxLines : null,

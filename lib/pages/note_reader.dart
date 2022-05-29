@@ -135,6 +135,7 @@ class _NoteReaderScreenState extends State<NoteReaderScreen> {
           onPressed: save, 
           
           child: Icon(Icons.save),
+          backgroundColor: Color.fromARGB(255, 57, 56, 54),
         ),
     );
     
