@@ -17,7 +17,8 @@ Widget NoteCard(Function()? onTap, QueryDocumentSnapshot doc){
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(doc["title"], 
-                style: GoogleFonts.robotoFlex(fontWeight: FontWeight.w700, fontSize: 17, color: Colors.white),),
+                style: GoogleFonts.robotoFlex(fontWeight: FontWeight.w700, fontSize: 17, color: Colors.white),
+                overflow: TextOverflow.ellipsis,),
 
           SizedBox(height: 5.0,),
 
